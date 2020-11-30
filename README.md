@@ -1,5 +1,5 @@
 # massmail
-Tool that sends mass custom emails
+Tool that sends custom emails to the masses
 
 ## Structure
 
@@ -24,7 +24,9 @@ pip install -r requirements.txt
 
 2. Next make sure that data.csv is filled out. Currently it contains a sample of what such a csv can look like. The first row of the csv should contain the column names that will be substituted in the body and subject line of the emails. Make sure that one of the columns is called "email" as it is required.
 
-3. Finally replace constants.py with the appropriate email and subject line like how the template currently does it using an f-string.
+3. Replace constants.py with the appropriate email and subject line like how the template currently does it using an f-string. Note that formatting and line breaks here show up in the actual email.
+
+4. Visit https://myaccount.google.com/u/3/lesssecureapps using the account you intend to send emails with and allow less secure apps. This change allows local applications that are running from your personal computer to gain access to your gmail account, kind of like when you log in with google on external sites.
 
 ## Usage
 
