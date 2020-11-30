@@ -88,6 +88,8 @@ def parse_data():
     df = pandas.read_csv("data.csv")
     if len(df) <= 1:
         raise Exception("data.csv has at most 1 row, send a single email manually please")
+    if "email" not in list(df.columns):
+        raise Exception("data.csv does not contain email field")
     data = df
 
 def generate_samples():
@@ -176,15 +178,17 @@ def get_options():
 def main():
     '''entry point to program'''
     opts = get_options()
-    init_email()
     parse_data()
     if opts["sample"]:
         run_sample()
-    elif opts["test"]:
-        run_test()
+        return
     else:
-        run_mass_emailer()
-    server.quit()
+        init_email()
+        if opts["test"]:
+            run_test()
+        else:
+            run_mass_emailer()
+        server.quit()
 
 
 if __name__ == "__main__":
