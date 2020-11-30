@@ -5,10 +5,11 @@ Tool that sends custom emails to the masses
 
 ```
 |
-\-- config.txt          template for constants
 \-- constants.py        constants including email body
-\-- email.py            script entry point
+\-- data.csv            data for each email
+\-- massmail.py         script entry point
 \-- README.md           this document
+\-- requirements.txt    python pkg requirements
 
 ```
 
