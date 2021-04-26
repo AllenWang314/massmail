@@ -94,7 +94,7 @@ def run_test():
     emails = generate_samples()
     for e in emails:
         e.send_test()
-    print("Sucess!")
+    print("Success!")
     print("**************************************************")
 
 def init_email():
