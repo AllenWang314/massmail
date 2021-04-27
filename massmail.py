@@ -140,7 +140,7 @@ def run_mass_emailer():
         e = Email(r['email'], SUBJECT.format(**r), BODY.format(**r))
         e.send()
         print(f"Email successfully sent to {r['email']}, sent {i+1}/{len(data)}")
-        time.sleep(0.1)
+        time.sleep(2) # google limits 80 emails a minute
     
     print(f"Successfully sent {len(data)} emails!")
     print("**************************************************")
