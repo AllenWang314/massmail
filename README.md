@@ -1,4 +1,5 @@
 #massmail
+testing
 Tool that sends custom emails to the masses
 
 ## Structure
