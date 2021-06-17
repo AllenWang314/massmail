@@ -1,4 +1,5 @@
-# massmail
+#massmail
+testing precommit hook
 Tool that sends custom emails to the masses
 
 ## Structure
